@@ -1,14 +1,24 @@
-package com.algorithms.sorting;
+package com.algorithms.main;
+
+import com.algorithms.sorting.*;
 
 import java.util.Arrays;
 
 public class Main
 {
     public static void main(String[] args) {
-        InsertionSort insertionSort = new InsertionSort();
+        int[] x = {12, 3, 2, 4};
 
-        int[] x = {2,3,24,454,23,434,45,2,1};
-        insertionSort.sort(x);
+        InsertionSort insertionSort = new InsertionSort();
+        // insertionSort.sort(x);
+        MergeSort mergeSort = new MergeSort();
+        // mergeSort.sort(x, 0, x.length - 1);
+        BubbleSort bubbleSort = new BubbleSort();
+        // bubbleSort.sort(x);
+        SelectionSort selectionSort = new SelectionSort();
+        // selectionSort.sort(x);
+        QuickSort quickSort = new QuickSort();
+        quickSort.sort(x, 0, x.length - 1);
 
         System.out.println(Arrays.toString(x));
     }
